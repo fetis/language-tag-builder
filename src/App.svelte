@@ -1,10 +1,20 @@
 <script>
+	import Test from './Test.svelte';
+	import svelte from 'svelte/compiler';
+
 	export let name;
 </script>
 
 <main>
 	<h1>BCP 47 Language tag builder</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	{ name + '22' }
+	<Test></Test>
+<!--	{#await promise}-->
+<!--		-->
+<!--	{/await}}-->
+	<p>
+		Generated with Svelte v{svelte.VERSION}
+	</p>
 </main>
 
 <style>
@@ -28,3 +38,5 @@
 		}
 	}
 </style>
+
+

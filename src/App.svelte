@@ -2,13 +2,14 @@
 	import Test from './Test.svelte';
 	import svelte from 'svelte/compiler';
 
-	export let name;
+	export const time = Date.now();
 </script>
 
 <main>
 	<h1>BCP 47 Language tag builder</h1>
-	{ name + '22' }
-	<Test></Test>
+	{ time }
+
+	<Test />
 <!--	{#await promise}-->
 <!--		-->
 <!--	{/await}}-->

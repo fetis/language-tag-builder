@@ -17,14 +17,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      
+
     - name: Install Node.js
       uses: actions/setup-node@v1
       with:
         node-version: "14.x"
-        
+
     - name: Install packages
       run: npm ci
-      
+
     - name: Build website
       run: npm run build --if-present
+
+    - name: Commit results
+      run: |
+        date > docs/build/updated
+        git commit -am "publish result"
+        git push origin
